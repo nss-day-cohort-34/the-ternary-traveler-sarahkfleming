@@ -25,7 +25,7 @@ const createInterestObject = (place, name, description, cost, review) => {
     return {
         name: name.value,
         // Make sure to figure out what I have to pass through for the placeId to be created
-        placeId: place.value,
+        placeId: parseInt(place.value),
         description: description.value,
         cost: cost.value,
         review: review.value
@@ -49,11 +49,40 @@ const clearFormFields = () => {
     placeInput.value = ""
 }
 
-// Add click listener to main container
-// interestsContainer.addEventListener("click", () => {
-//     if (event.target.id.startsWith("saveInterest")) {
-//         if ()
-//     } else {
-//         event.stopPropagation()
-//     }
-// })
+const inputsArray = [
+    nameInput,
+    descriptionInput,
+    costInput,
+    reviewInput,
+    placeInput
+]
+
+const formValidationCheck = () => {
+    let validated
+    for (let index = 0; index < inputsArray.length; index++) {
+        const input = inputsArray[index]
+        if (input.value === "") {
+            validated = false
+            alert("Please fill out all fields")
+            break
+        } else {
+            validated = true
+        }
+    }
+    return validated
+}
+    // Add click listener to main container
+    interestsContainer.addEventListener("click", () => {
+        if (event.target.id.startsWith("saveInterest")) {
+            const resultOfValidation = formValidationCheck()
+                if (resultOfValidation && hiddenInterestId.value === "") {
+                    // Create new interest
+                    const newInterest = createInterestObject(placeInput, nameInput, descriptionInput, costInput, reviewInput)
+                    API.savePointOfInterest(newInterest)
+                } else {
+                    // Edit interest
+                }
+        } else {
+            event.stopPropagation()
+        }
+    })

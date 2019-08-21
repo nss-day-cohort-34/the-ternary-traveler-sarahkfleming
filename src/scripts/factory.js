@@ -24,9 +24,9 @@ const factoryFunctions = {
                 <label for="placeName">Place</label>
                 <select name="placeName" id="placeName" required>
                     <option value="">Select One</option>
-                    <option value="Italy">Italy</option>
-                    <option value="France">France</option>
-                    <option value="Switzerland">Switzerland</option>
+                    <option value="1">Italy</option>
+                    <option value="2">Switzerland</option>
+                    <option value="3">France</option>
                 </select>
              </fieldset>
             <button id="saveInterest">Save</button>
