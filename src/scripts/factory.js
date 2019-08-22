@@ -38,12 +38,25 @@ const factoryFunctions = {
     createInterestRepresentation(interest) {
         return `
         <section class="interest">
+        <button id="editInterest-${interest.id}">Edit</button>
+        <button id="deleteInterest-${interest.id}">Delete</button>
+            <h2 class="interestPlace">${interest.place.name}</h2>
             <p class="interestName">Name: ${interest.name}</p>
             <p class="interestDescription">Description: ${interest.description}</p>
-            <p class="interestCost">Cost: ${interest.cost}</p>
-            <p class="interestReview">Review: ${interest.review}</p>
-            <p class="interestPlace">Place: ${interest.place.name}</p>
+            <div id="costAndReview-${interest.id}">
+                <p class="interestCost">Cost: ${interest.cost}</p>
+                <p class="interestReview">Review: ${interest.review}</p>
+            </div>
         </section>
+        `
+    },
+    createEditForm(interest) {
+        return `
+            <label for="editCost">Cost</label>    
+            <input type="text" id="editCost" name="editCost" value="${interest.cost}"></input>
+            <label for="editReview">Review</label>    
+            <textarea name="editReview" rows="5" cols="15" id="editReview" value="${interest.review}"></textarea>
+            <button id="saveEditedInterest-${interest.id}">Save</button>
         `
     }
 }

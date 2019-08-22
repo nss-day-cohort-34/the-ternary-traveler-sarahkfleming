@@ -1,6 +1,6 @@
 const API = {
     getPointsOfInterest() {
-        return fetch("http://localhost:8088/interests?_expand=place")
+        return fetch("http://localhost:8088/interests?_expand=place&_sort=placeId&_order=asc")
             .then(response => response.json())
     },
     savePointOfInterest(interestObject) {

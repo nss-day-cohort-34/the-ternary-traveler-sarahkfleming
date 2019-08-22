@@ -22,8 +22,16 @@
       "placeId": 1,
       "name": "Local Market",
       "description": "Local market where you can purchase local products and try the local food",
-      "cost": 0,
+      "cost": "0",
       "review": "You can definitely get things for a lower price if you are willing to bargain!"
+    },
+    {
+      "name": "Lake Como",
+      "placeId": 1,
+      "description": "As a tourist destination, Lake Como is popular for its landscapes, wildlife, and spas. It is a venue for sailing, windsurfing, and kitesurfing. In the area surrounding Lake Como there are several farms which produce goods such as honey, olive oil, cheese, milk, eggs and salamis. Visitors can find lists of these farms and typically visit the farm itself in person to make their purchases.",
+      "cost": "500.00",
+      "review": "This is the most beautiful lake I've ever seen. We took a boat tour, and our tour guide pointed out houses owned by celebrities. We also visited a house where they filmed the James Bond film Skyfall. I saw Michael Strahan there!",
+      "id": 2
     }
   ]
 }

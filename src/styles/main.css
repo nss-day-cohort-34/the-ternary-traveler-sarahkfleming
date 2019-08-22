@@ -1,0 +1,10 @@
+.interest {
+    border: 1px solid black;
+    width: 32%;
+    padding: 1%;
+    margin: 1%;
+}
+
+#listOfInterests {
+    display: flex;
+}
